@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>页面标题</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+/* body 样式 */
+body {
+    font-family: Arial;
+    
+    height:70%;
+}
+
+
+
+/* 导航 */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    
+}
+
+/* 按钮 */
+.navbar button {
+    float: right;
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+/* 列容器 */
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    min-height: 900px;
+    overflow: scroll; 
+}
+
+/* 创建两个列 */
+/* 边栏 */
+.input {
+    -ms-flex: 70%; /* IE10 */
+    flex: 70%;
+    background-color: #f1f1f1;
+    overflow: inherit; 
+    font-size: 25px;
+    word-wrap:break-word;
+}
+
+/* 输出显示区域 */
+.output {   
+    
+    -ms-flex: 30%; /* IE10 */
+    flex: 30%;
+    background-color: white;
+    padding: 20px;
+    overflow: inherit; 
+}
+/* 输入显示区域 */
+.input1 {
+    -ms-flex: 70%; /* IE10 */
+    flex: 70%;
+    background-color: #f1f1f1;
+    overflow: inherit; 
+    font-size: 25px;
+    word-wrap:break-word;
+    border: none;
+    min-height:900px;
+}
+
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 700px 时, 让两栏上下堆叠显示 */
+@media screen and (max-width: 700px) {
+    .row {   
+        flex-direction: column;
+    }
+}
+
+
+</style>
+</head>
+<body>
+
+
+<div class="navbar">
+  
+  <button type="submit">炼丹</button>
+  
+</div>
+
+<div class="row">
+  <div class="input">
+      
+	  <textarea class="input1" row="" column="" placeholder="请输入原文。。" name="txt_input" style="width: 100%; height: 100%"></textarea>
+  </div>
+  <div class="output">
+      <h2>out</h2>
+
+  </div>
+</div>
+
+
+
+</body>
+</html>
