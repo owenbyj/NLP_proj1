@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block title %}Key Extractor{% endblock %}
+
+{% block page_content %}
+<!-- Begin page content -->
+    <div class="container">
+      <div class="page-header">
+        <h1>Key Extractor - 提取主题</h1>
+      </div>
+      <ul class="nav nav-tabs" id="ext-nav">
+          <li role="presentation" class="active"><a href="#extractor" data-toggle="tab">Extractor</a></li>
+          <li role="presentation"><a href="#document" data-toggle="tab">Document</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="extractor">
+                <h2>提取器</h2>
+                <div class="container">
+                    <form role="form" action="/key_extractor/" method="post">
+                        <style type="text/css">
+                            .area {margin: 10px;}
+                        </style>
+                        <div class="container bg-info area">
+                            <h3>Inputs</h3>
+                            <div class="form-group">
+                                <label for="smooth1">
+                                    <input type="radio" name="smooth_method" id="smooth1" value="smooth1" checked>
+                                    smooth1
+                                </label>
+                                <label for="smooth2">
+                                    <input type="radio" name="smooth_method" id="smooth2" value="smooth2">
+                                    smooth2
+                                </label>
+                                <label for="compare">
+                                    <input type="radio" name="smooth_method" id="compare" value="compare">
+                                    compare
+                                </label>
+
+                            </div>
+                            <div class="form-group">
+                                <h4>标题</h4>
+                                {% if output.input_title %}
+                                    <input type="text" class="form-control" name="input-title" id="input-title" value="{{ output.input_title }}">
+                                {% else %}
+                                    <input type="text" class="form-control" name="input-title" id="input-title">
+                                {% endif %}
+                            </div>
+                            <div class="form-group">
+                                <h4>内容</h4>
+                                {% if output.input_str %}
+                                    <textarea class="form-control" rows="8" name="input-content" id="input-content">{{ output.input_str }}</textarea>
+                                {% else %}
+                                    <textarea class="form-control" rows="8" name="input-content" id="input-content"></textarea>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-default">提交</button>
+
+                        <div class="container bg-info area">
+                            <h3>Outputs</h3>
+                            {% if output.output_list %}
+                                {% for dic in output.output_list %}
+                                    <p class="bg-info"><b>Smooth Method</b>: {{ dic.smooth_method }}</p>
+                                    <p class="bg-info"><b>Contents</b>: {{ dic.value }}</p>
+
+                                {% endfor %}
+                            {% else %}
+                                <div class="container" id="blank"></div>
+                            {% endif %}
+                        </div>
+
+
+                    </form>
+
+                </div>
+            </div>
+
+            <div class="tab-pane" id="document">
+                <h2>原理</h2>
+                <p class="lead">SIF, </p>
+                <p class="lead">Place some documents here...</p>
+            </div>
+
+        </div>
+    </div>
+
+<!--    <footer class="footer">-->
+<!--      <div class="container">-->
+<!--        <p class="text-muted">Place sticky footer content here.</p>-->
+<!--      </div>-->
+<!--    </footer>-->
+{% endblock %}
+
+{% block script %}
+<script>
+    $('#ext-nav a').click(
+        function (e) {
+            e.preventDefault()
+            $(this).tab('show')
+        }
+    )
+</script>
+{% endblock %}

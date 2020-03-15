@@ -1,5 +1,7 @@
 import numpy as np
 
+import datetime
+
 def get_word_map(wv):
     word_idx_dict = {word: idx for idx, word in enumerate(wv.index2entity)}
     return word_idx_dict
@@ -9,14 +11,18 @@ def getWordWeight(wv, a=1e-3):
     '''
     return a word:weight dict
     '''
+
+    print('1' + datetime.datetime.now().strftime('%H-%M-%S'))
     word_count_dict = {}
     for word in wv.vocab:
         word_count_dict[word] = wv.vocab[word].count
     N = float(sum(word_count_dict.values()))
+    print('2' + datetime.datetime.now().strftime('%H-%M-%S'))
     if a <= 0: # when the parameter makes no sense, use unweighted
         a = 1.0
     for key, value in word_count_dict.items():
         word2weight[key] = a / (a + float(value)/N)
+
     return word2weight
 
 def getWeight(word_idx_dict, word2weight):

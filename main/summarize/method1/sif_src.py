@@ -6,18 +6,9 @@ from gensim.models import KeyedVectors
 from gensim.models import Word2Vec
 from gensim.models.word2vec import LineSentence
 
+import datetime
 
-class params(object):
-    
-    def __init__(self):
-        self.LW = 1e-5
-        self.LC = 1e-5
-        self.eta = 0.05
 
-    def __str__(self):
-        t = "LW", self.LW, ", LC", self.LC, ", eta", self.eta
-        t = map(str, t)
-        return ' '.join(t)
         
 def get_weighted_average(We, x, w):
     """
