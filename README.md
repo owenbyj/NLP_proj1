@@ -17,6 +17,8 @@ Desciption of Process:
 3. Use SIF tech to generate the sentence vector
     1. a/（a+p_w) (a is a smooth varible, p_w is the frequency of the word)
     2. Use SVD to decrease the dimension
+    3. Cope with the words not does not appear in the data sets. We create a UNK vector.
+        We randomly pick 10 percent of the sentences and randomly change some word to UNK to train the UNK vector.
 4. Calculate the similarity of the sentence vector with the article vector
 5. Smooth to make the processed article more readable
     1. knn
