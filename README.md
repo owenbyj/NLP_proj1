@@ -18,7 +18,7 @@ about 10s
 ##Desciption of Process:
 1. Use jieba to divded the datasets into words
 2. Train the word2vec model by processed data(300 dimension)
-![Image text](http://i2.tiimg.com/713520/70ff652c18dd8491.jpg)
+![Image text](https://raw.githubusercontent.com/hongmaju/light7Local/master/img/productShow/20170518152848.png)
 
 3. Use SIF tech to generate the sentence vector
     1. a/（a+p_w) (a is a smooth varible, p_w is the frequency of the word)
