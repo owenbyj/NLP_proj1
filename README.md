@@ -2,20 +2,20 @@
 URL:http://35.194.183.66/key_extractor/
 
 
-**Input: 
+## Input: 
 an article(with or without title)
 
-##Output: 
+## Output: 
 a concised version of the article, which conclude the most significent part of the article.
 
-##Time_Consumption:
+## Time_Consumption:
 about 10s
 
-##source of data:
+## source of data:
 1.Wikipedia Chinese Version
 2.News Dataset
 
-##Desciption of Process:
+## Desciption of Process:
 1. Use jieba to divded the datasets into words
 2. Train the word2vec model by processed data(300 dimension)
 ![Markdown](http://i2.tiimg.com/713520/70ff652c18dd8491.jpg)
@@ -35,13 +35,13 @@ about 10s
 6. Choosing the top 20% sentences after smooth.
 7. Sort the choosen sentence by original order.
 
-##Adavantages
+## Adavantages
 1. A very clean user interface, which is very user-friendly. 
 2. Good to adapt mobile phone browser or computer web browser.
 3. The main idea is completely concluded by processed.
 4. We tried multiple smooth method for users to choose from.
 5. The compressed article is with great readability.
 
-##Disadvantages
+## Disadvantages
 1. It is not a real time program. Takes about 10s for long article.
 2. To increase the completeness and readability of sentences. We separete the article by sentences, which may sometimes catch the important sentences with a little part not that related. 
