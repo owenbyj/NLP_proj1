@@ -20,7 +20,7 @@ about 10s
 ## Desciption of Process:
 1. Use jieba to divded the datasets into words
 2. Train the word2vec model by processed data(300 dimension)
-![Markdown](http://i2.tiimg.com/713520/70ff652c18dd8491.jpg)
+![Markdown](https://i2.tiimg.com/713520/70ff652c18dd8491.jpg)
 
 3. Use SIF tech to generate the sentence vector
     1. a/（a+p_w) (a is a smooth varible, p_w is the frequency of the word)
@@ -28,7 +28,7 @@ about 10s
     3. Cope with the words not does not appear in the data sets. We create a UNK vector.
         We randomly pick 10 percent of the sentences and randomly change some word to UNK to train the UNK vector.
 4. Calculate the similarity of the sentence vector with the article vector
-![Markdown](http://i1.fuimg.com/713520/1bc823403934583e.jpg)
+    #![Markdown](https://i1.fuimg.com/713520/1bc823403934583e.jpg)
 5. Smooth to make the processed article more readable
     1. knn
         find the k nearest sentences, and calculate the mean Euclidean distance of the sentences as the similarity.
