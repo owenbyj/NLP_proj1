@@ -1,7 +1,7 @@
 # NLP_proj1
 ## URL:http://35.194.183.66/key_extractor/
 ## Interface
-![Markdown](http://i2.tiimg.com/713520/70ff652c18dd8491.jpg)
+![Markdown](http://i1.fuimg.com/713520/4d6d1ed19562dee4.png)
 
 ## Input: 
 an article(with or without title)
