@@ -1,6 +1,8 @@
 # NLP_proj1
 URL:http://35.194.183.66/key_extractor/
 
+![](NLP_proj1/graph/interface.jpg)
+
 Input: an article(with or without title)
 
 Output: a concised version of the article, which conclude the most significent part of the article.
