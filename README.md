@@ -1,7 +1,7 @@
 # NLP_proj1
 URL:http://35.194.183.66/key_extractor/
 
-![](NLP_proj1/graph/interface.jpg)
+![INTERFACE](https://github.com/owenbyj/NLP_proj1/blob/master/graph/interface.jpg)
 
 Input: an article(with or without title)
 
