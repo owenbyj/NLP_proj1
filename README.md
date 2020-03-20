@@ -1,5 +1,5 @@
 # NLP_proj1
-url:http://35.194.183.66/key_extractor/
+URL:http://35.194.183.66/key_extractor/
 
 Input: an article(with or without title)
 
