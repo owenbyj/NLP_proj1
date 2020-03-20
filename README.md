@@ -28,11 +28,11 @@ about 10s
     3. Cope with the words not does not appear in the data sets. We create a UNK vector.
         We randomly pick 10 percent of the sentences and randomly change some word to UNK to train the UNK vector.
 4. Calculate the similarity of the sentence vector with the article vector
+![Markdown](http://i1.fuimg.com/713520/1bc823403934583e.jpg)
 5. Smooth to make the processed article more readable
     1. knn
         find the k nearest sentences, and calculate the mean Euclidean distance of the sentences as the similarity.
-        ![Markdown](http://i2.tiimg.com/713520/8f31f07ed66e5bf2.jpg)
-        ![Markdown](http://i2.tiimg.com/713520/7a3fdfc3120b3a1d.jpg)
+        ![Markdown](http://i1.fuimg.com/713520/0cd42d35b717380b.jpg)
     2. convolution
         Using a method similar to text-cnn. Using a (1,n) dimension kernel to catch the pattern of context. 
         e.g. (1,4)kernel catch one sentences before and two sentences after the main sentences.
