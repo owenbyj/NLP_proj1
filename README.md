@@ -2,7 +2,7 @@
 URL:http://35.194.183.66/key_extractor/
 
 
-##Input: 
+**Input: 
 an article(with or without title)
 
 ##Output: 
