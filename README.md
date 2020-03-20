@@ -20,7 +20,7 @@ Desciption of Process:
 4. Calculate the similarity of the sentence vector with the article vector
 5. Smooth to make the processed article more readable
     1. knn
-        find the k nearest sentences, and calculate the mean of the sentences as the similarity.
+        find the k nearest sentences, and calculate the mean Euclidean distance of the sentences as the similarity.
     2. convolution
         Using a method similar to text-cnn. Using a (1,n) dimension kernel to catch the pattern of context. 
         e.g. (1,4)kernel catch one sentences before and two sentences after the main sentences.
