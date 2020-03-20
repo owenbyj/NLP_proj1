@@ -1,6 +1,6 @@
 # NLP_proj1
 URL:http://35.194.183.66/key_extractor/
-
+![Markdown](http://i2.tiimg.com/713520/13e2777d6382e7c6.jpg)
 
 ## Input: 
 an article(with or without title)
@@ -29,9 +29,12 @@ about 10s
 5. Smooth to make the processed article more readable
     1. knn
         find the k nearest sentences, and calculate the mean Euclidean distance of the sentences as the similarity.
+        ![Markdown](http://i2.tiimg.com/713520/8f31f07ed66e5bf2.jpg)
+        ![Markdown](http://i2.tiimg.com/713520/7a3fdfc3120b3a1d.jpg)
     2. convolution
         Using a method similar to text-cnn. Using a (1,n) dimension kernel to catch the pattern of context. 
         e.g. (1,4)kernel catch one sentences before and two sentences after the main sentences.
+        ![Markdown](http://i2.tiimg.com/713520/340f8f4b6f3b7fd1.png)
 6. Choosing the top 20% sentences after smooth.
 7. Sort the choosen sentence by original order.
 
